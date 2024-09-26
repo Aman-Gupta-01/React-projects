@@ -1,2 +1,21 @@
 # React-projects
 just react projects for learning
+
+# React
+- React is used for UI creation
+- React create a virtual DOM like browser DOM
+- React compare browser DOM tree to virtual DOM
+- After comparing with Browser DOM react make changes only to the updated part
+
+# React Hooks 
+
+import { hookExample } from 'react'
+
+- useState(): useState hook is use to set variable and give power to update in UI
+--> const [name, setName] = useState("Aman")
+
+- useEffect(): this hook use to run a part of code when something is changed
+--> useEffect( () => {}, [] )
+  
+- useRef(): this hook used when you don't need to render that part of code
+--> let refOne = useRef(0 | null) {// you can use either '0' or 'null', based on your requirement}
