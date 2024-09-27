@@ -12,10 +12,14 @@ just react projects for learning
 import { hookExample } from 'react'
 
 - useState(): useState hook is use to set variable and give power to update in UI
---> const [name, setName] = useState("Aman")
-
+```React
+const [name, setName] = useState("Aman")
+```
 - useEffect(): this hook use to run a part of code when something is changed
---> useEffect( () => {}, [] )
-  
+```React
+useEffect( () => {}, [] )
+```
 - useRef(): this hook used when you don't need to render that part of code
---> let refOne = useRef(0 | null) {// you can use either '0' or 'null', based on your requirement}
+```React
+let refOne = useRef(0 | null) {// you can use either '0' or 'null', based on your requirement}
+```
