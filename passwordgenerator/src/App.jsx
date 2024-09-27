@@ -29,10 +29,12 @@ function App() {
 
   const copyPasswordToClipboard = useCallback(() => {
     passwordRef.current?.select()
-    passwordRef.current?.setSelectionRange(0, length)
+    passwordRef.current?.setSelectionRange(0, 12)
     window.navigator.clipboard.writeText(password)
   }, [password])
 
+
+  // use effect will run the function aur code inside it when the values in side the array are or is changed
   useEffect(()=>{
     passwordGenerator()
   }, [length, numberAllowed, charAllowed, passwordGenerator])
@@ -43,7 +45,7 @@ function App() {
       <h1 className='text-4xl text-center text-white my-3'>Password Generator</h1>
         <div className='flex shadow rounded-lg overflow-hidden mb-4'>
           <input type="text" value={password} className='outline-none w-full py-1 px-3' placeholder='Password' readOnly ref={passwordRef}/>
-          <button className='outline-none bg-orange-700 text-white px-7 py-0.5 shrnk-0' onClick={copyPasswordToClipboard}>copy</button>
+    <button className='outline-none bg-orange-700 text-white px-7 py-0.5 shrnk-0' onClick={copyPasswordToClipboard}>copy</button>
         </div>
         <div className='flex text-sm gap-x-2'>
           <div className='flex items-center gap-x-1'>
