@@ -24,7 +24,7 @@ useEffect( () => {}, [] )
 let refOne = useRef(0 | null) {// you can use either '0' or 'null', based on your requirement}
 ```
 # Prop Drilling
-### Suppose -
+### Suppose
 - we have a react page with nested components
   ```javascript
   
@@ -39,8 +39,8 @@ let refOne = useRef(0 | null) {// you can use either '0' or 'null', based on you
   ------------------------------------
   
   ```
-- we have 2 component <Deshboard /> and <User /> in the <App />
-- <User /> have 1 prop name <User name=""/> in <User /> we dont have the direct acces of the name,
+- we have 2 component Deshboard and User in the App 
+- User have 1 prop name User, in User we have to pass the data name and we don't have the direct acces of the name,
 - we getting the name thorugh "Prop Drilling"
 
 ### like this
