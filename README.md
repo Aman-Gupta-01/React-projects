@@ -43,7 +43,7 @@ let refOne = useRef(0 | null) {// you can use either '0' or 'null', based on you
 - <User /> have 1 prop name <User name=""/> in <User /> we dont have the direct acces of the name,
 - we getting the name thorugh "Prop Drilling"
 
-- like this
+### like this
   ```javascript
   
   <App name=""/>
