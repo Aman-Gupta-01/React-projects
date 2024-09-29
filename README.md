@@ -24,7 +24,7 @@ useEffect( () => {}, [] )
 let refOne = useRef(0 | null) {// you can use either '0' or 'null', based on your requirement}
 ```
 # Prop Drilling
-## Suppose -
+### Suppose -
 - we have a react page with nested components
   ```javascript
   
