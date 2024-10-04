@@ -57,3 +57,58 @@ let refOne = useRef(0 | null) {// you can use either '0' or 'null', based on you
   ------------------------------------
   
   ```
+
+
+#Context API
+- Context API is a way to manage states in react,
+- and context API is also help to prevent prop drilling
+
+## To create Context API 
+- create files and folder with .js, then
+
+``` javascript
+// in one file all setup of Context API
+
+//importing nessesry 
+import { useContext, createContext } from 'react'
+
+//creating Context
+export const UserContext = cereatContext({
+  user: {
+    id: 1,
+    name: "user",
+    email: "mail@mail.com"
+  }
+  login: (id, password)=>{}
+})
+
+//creating hook for context 
+export const useUser = () => {
+  reture useContext(UserContext)
+}
+
+//creating Provider
+export const UserProvider = UserContext.Provider
+
+```
+## To use Context API 
+- go to App component 
+
+``` javascript
+
+//importing nessesry
+import { UserProvider } from 'path'
+
+export default function App(){
+  //useState and other Hooks
+
+  return(
+    <UserProvider value={{user, login}}>
+
+      //Code
+
+    </UserProvider>
+  )
+}
+
+```
